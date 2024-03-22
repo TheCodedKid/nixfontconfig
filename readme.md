@@ -1,7 +1,7 @@
 Recently, I figured out how to install bitmap fonts on to NixOS. Orginally, this is something that I was very interested in trying to do when I was messing with Arch a few years ago. But I dumb so
 
 
-# To Install
+# To Install Fonts on Nix
 
 The command that I found was orginally in this post [here](https://discourse.nixos.org/t/how-to-install-bitmap-fonts/3147), where adding this to `/etc/nixos/configuration.nix`, with some modification to support newer language changes:
 
@@ -49,3 +49,22 @@ Here's how to calculate the `sha256` for a GitHub repository:
   - After running, it outputs the `sha256` hash of the file at the provided URL.
 
 The `rev` and `sha256` are then used in your Nix expressions to refer to a specific state of the repository content securely and reproducibly. This approach ensures that every time your Nix expression is evaluated, it fetches the exact same version of the code or resource, maintaining the reproducibility of your builds and configurations.
+
+After the `sha256` definition, there is a `/bitmap`. Make sure to replace that with the path of the fonts realative to the Git repo's parent path.
+
+- Example: In the Tecate example, the fonts are in the `bitmap` folder, so in this case, the full path is `/bitmap`
+
+
+## Verify
+ You can verify the installed fonts with `fc-list`. 
+
+ You can also use grep to help search faster, in the case of the font `haxor`, we would use:
+ - `fc-list | grep -i "haxor"`
+
+# For Alacritty
+
+You can take a closer look at the example `alacritty.yml` file to better understand how the bitmap fonts would work. Keep in mind that you may have to adjust the `spacing` values to get it to display correctly. 
+
+
+
+GLHF :]

@@ -57,3 +57,18 @@ colors:
     cyan:    '0xff66e9'
     white:   '0xff56f1'
 
+
+bell:
+  command:
+    program: aplay
+    args:
+      - /home/samuel/.config/alacritty/button14.wav
+
+cursor:
+  style: Beam
+
+visual_bell:
+  animation: EaseOutExpo
+  duration: 200
+  color: '0xffffff'
+
