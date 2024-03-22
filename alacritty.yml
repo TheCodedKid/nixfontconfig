@@ -1,0 +1,59 @@
+# Alacritty configuration file
+
+window:
+  # Adjust the window dimensions if needed
+ # dimensions:
+ #   columns: 120
+ #   lines: 30
+  opacity: 0.85
+
+font:
+  # Assuming "haxor" is the font name as recognized by your system.
+  # Replace 'haxor' with the exact font name from `fc-list` output if necessary.
+  normal:
+    family: 'cherry'
+    style: Regular
+  # Set the font size
+  size: 12.0
+  # Adjust the following offsets and spacing if the text appears too "scrunched together"
+  offset:
+    x: 2
+    y: 2
+  spacing:
+    x: 0
+    y: 0
+
+# Color settings
+colors:
+  # Background color: dark brown-black
+  primary:
+    background: '0x1a0d0b'
+    foreground: '0xffc0cb' # Light pink for the main text color
+
+  # Cursor colors, adjust if necessary
+  cursor:
+    text:   '0x1a0d0b' # Background color for consistency
+    cursor: '0xffc0cb' # Foreground color for visibility
+
+  # Defining a palette of pinks for different uses
+  normal:
+    black:   '0xffc0cb'
+    red:     '0xffb6c1' # Lighter pink
+    green:   '0xffa6c9'
+    yellow:  '0xff96d1'
+    blue:    '0xff86d9'
+    magenta: '0xff76e1'
+    cyan:    '0xff66e9'
+    white:   '0xff56f1' # Brightest pink
+
+  # Bright colors for emphasized text, using a similar palette
+  bright:
+    black:   '0xffc0cb'
+    red:     '0xffb6c1'
+    green:   '0xffa6c9'
+    yellow:  '0xff96d1'
+    blue:    '0xff86d9'
+    magenta: '0xff76e1'
+    cyan:    '0xff66e9'
+    white:   '0xff56f1'
+
